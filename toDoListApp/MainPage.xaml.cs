@@ -4,9 +4,7 @@ namespace toDoListApp
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-        public ObservableCollection<Task> MyTasks { get; set; }
-        public string MyTitle { get; set; } = "Lista de Tareas";
+        
 
         public MainPage()
         {
@@ -15,9 +13,34 @@ namespace toDoListApp
 
         private void AddBtn_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("¿Seguro que quieres salir?",
-                "Al salir tu riñon izquierdo será nuestro",
-                "Bueno....");
+            //Source
+            var task = new Tasks()
+            {
+                TaskName = "Lavar los platos",
+                Status = "Pendiente",
+                ColorTask = "Yellow"
+            };
+
+
+            //Binding
+            var bindingTaskName = new Binding();
+            bindingTaskName.Source = task;
+            bindingTaskName.Path = "TaskName"; // LO que quiero mostrar
+
+            var bindingStatus = new Binding();
+            bindingStatus.Source = task;
+            bindingStatus.Path = "Status";
+
+            var bindingColor = new Binding();
+            bindingColor.Source = task;
+            bindingColor.Path = "ColorTask";
+
+            //Target
+            Tarea.SetBinding(Label.TextProperty, bindingTaskName); //Text property: definir la propiedad a usarse
+            Tarea.SetBinding(Label.TextColorProperty, bindingColor);
+            Estado.SetBinding(Label.TextProperty, bindingStatus);
+
+
         }
     }
 }

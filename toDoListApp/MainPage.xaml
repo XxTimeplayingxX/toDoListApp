@@ -3,21 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="toDoListApp.MainPage"
              x:Name="MyMainPage"
-             BackgroundColor="Black">
+             BackgroundColor="white">
              
 
     <ScrollView>
         <StackLayout
             Spacing="25"            
             Padding="30,0"
-            VerticalOptions="Center">
+            VerticalOptions="Start">
 
-            <Label
-                Padding="10"
-                HorizontalOptions="Center"
-                FontSize="25"
-                BindingContext="{x:Reference Name=MyMainPage}"
-                Text="{Binding MyTitle}" TextColor="White"/>
+            <Label x:Name="Tarea"
+                   Padding="10" 
+                   BackgroundColor="Azure"
+                   HorizontalOptions="Center" 
+                   FontSize="22"                    
+                   Text="Primer Texto" TextColor="Black" 
+
+            />
+            <!--Hasta que no llamemos al binding no veremos cambios-->
+            <Label x:Name="Estado"
+                Padding="10" 
+                BackgroundColor="Azure"
+                HorizontalOptions="Center" 
+                FontSize="22"                    
+                Text="Segundo Texto" TextColor="Black" 
+
+             />
+            
 
             <Image
                Source="task.png"
