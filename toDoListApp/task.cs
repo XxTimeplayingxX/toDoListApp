@@ -10,6 +10,8 @@ namespace toDoListApp
     {
         public string TaskName { get; set; } //Se conecta con MainPage :0
         public string Status { get; set; }
-        public string ColorTask { get; set; }  
+        public string ColorText { get; set; }  
     }
+    
+
 }
