@@ -16,9 +16,9 @@ namespace toDoListApp
             //Source
             var task = new Tasks()
             {
-                TaskName = "Lavar los platos",
+                TaskName = "Estudiar C#",
                 Status = "Pendiente",
-                ColorTask = "Yellow"
+                ColorTask = "Blue"
             };
 
 
