@@ -12,21 +12,19 @@
             Padding="30,0"
             VerticalOptions="Start">
 
-            <Label x:Name="Tarea"
-                   Padding="10" 
+            <Label Padding="10" 
                    BackgroundColor="Azure"
                    HorizontalOptions="Center" 
                    FontSize="22"                    
-                   Text="Primer Texto" TextColor="Black" 
+                   Text="{Binding TaskName}" TextColor="Black" 
 
             />
             <!--Hasta que no llamemos al binding no veremos cambios-->
-            <Label x:Name="Estado"
-                Padding="10" 
+            <Label Padding="10" 
                 BackgroundColor="Azure"
                 HorizontalOptions="Center" 
                 FontSize="22"                    
-                Text="Segundo Texto" TextColor="Black" 
+                Text="{Binding Status}" TextColor="Black" 
 
              />
             
